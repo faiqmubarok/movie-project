@@ -11,7 +11,7 @@ const TopRated = () => {
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
       {!loading && !error && (
-        <CardContainer title="Top Rated" data={data} endPoint={endPoint} />
+        <CardContainer title="Top Rated" data={data} endPoint={endPoint} isMovie={true} />
       )}
     </>
   );

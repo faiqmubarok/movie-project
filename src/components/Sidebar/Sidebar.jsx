@@ -7,9 +7,6 @@ import { IoHome } from "react-icons/io5";
 import { LuTv } from "react-icons/lu";
 import { IoPeopleOutline } from "react-icons/io5";
 import { RiMovie2Fill } from "react-icons/ri";
-import { CiHeart } from "react-icons/ci";
-
-
 
 const Sidebar = ({ sidebarOpen, onCloseSidebar }) => {
     const navigation = [
@@ -24,8 +21,8 @@ const Sidebar = ({ sidebarOpen, onCloseSidebar }) => {
           icon: <RiMovie2Fill className="w-5 h-5" />,
         },
         {
-          name: "Serial",
-          path: "/serial",
+          name: "Tv Show",
+          path: "/tvshow",
           icon: <LuTv className="w-5 h-5" />,
         },
         {
@@ -82,10 +79,6 @@ const Sidebar = ({ sidebarOpen, onCloseSidebar }) => {
                 </NavLink>
             ))}
         </div>
-        <button className="p-4 rounded-lg hover:bg-black/50 mt-3 flex gap-3 items-center w-full text-white">
-          <CiHeart className="w-6 h-6"/>
-            Watchlist
-        </button>
       </div>
     </aside>
   );

@@ -14,10 +14,10 @@ const Footer = () => {
                 <div className="flex items-center gap-4 col-span-2">
                     <Logo />
                     <p className="text-xl font-extrabold text-white">X</p>
-                    <a href="">
+                    <a target="_blank" className="noopener noreferrer" href={'https://developer.themoviedb.org/docs/getting-started'}>
                     <img
                         className="w-20"
-                        src="/public/tmdb-logo.svg"
+                        src="/tmdb-logo.svg"
                         alt="TMDB.Logo"
                     />
                     </a>
@@ -44,40 +44,34 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                Follow us
-              </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className="mb-4">
-                  <a
-                    href="https://github.com/themesberg/flowbite"
-                    className="hover:underline "
-                  >
-                    Github
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://discord.gg/4eeurUVvTy"
-                    className="hover:underline"
-                  >
-                    Discord
-                  </a>
-                </li>
+              <h2 className="mb-6 font-medium text-white uppercase">Tv Show</h2>
+              <ul className="text-third flex flex-col">
+                <NavLink to={'/tvshow/featured/airing_today'} className="mb-4 hover:text-accent text-sm">
+                  Airing Today
+                </NavLink>
+                <NavLink to={'/tvshow/featured/on_the_air'} className="mb-4 hover:text-accent text-sm">
+                  On The Air
+                </NavLink>
+                <NavLink to={'/tvshow/featured/popular'} className="mb-4 hover:text-accent text-sm">
+                  Popular
+                </NavLink>
+                <NavLink to={'/tvshow/featured/top_rated'} className="mb-4 hover:text-accent text-sm">
+                  Top Rated
+                </NavLink>
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              <h2 className="mb-6 font-medium text-white uppercase">
                 Legal
               </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className="mb-4">
-                  <a href="#" className="hover:underline">
+              <ul className="text-third flex flex-col">
+                <li className="mb-4 hover:text-accent text-sm">
+                  <a href="">
                     Privacy Policy
                   </a>
                 </li>
-                <li>
-                  <a href="#" className="hover:underline">
+                <li className="mb-4 hover:text-accent text-sm">
+                  <a href="" >
                     Terms &amp; Conditions
                   </a>
                 </li>

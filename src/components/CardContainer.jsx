@@ -4,11 +4,12 @@ import "swiper/css";
 
 import propTypes from "prop-types";
 import Card from "./Card/CardMovie";
+import CardTvShow from "./Card/CardTvShow";
 import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
 import { useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 
-const CardContainer = ({ title, data, endPoint }) => {
+const CardContainer = ({ title, data, endPoint, isMovie }) => {
   const swiperRef = useRef(null);
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
@@ -16,6 +17,7 @@ const CardContainer = ({ title, data, endPoint }) => {
   function formattedFeatured(formatName) {
     return formatName.replace(/_/g, "-");
   }
+
 
   return (
     <>
@@ -40,7 +42,8 @@ const CardContainer = ({ title, data, endPoint }) => {
           </button>
           {endPoint === "" ? null : (
           <NavLink 
-          to={`/movies/featured/${formattedFeatured(endPoint)}`} 
+          to={isMovie ? `/movies/featured/${formattedFeatured(endPoint)}` 
+          : `/tvshow/featured/${endPoint}`}
           className="text-accent font-medium hover:underline flex items-center">
             See All
           </NavLink>
@@ -66,9 +69,9 @@ const CardContainer = ({ title, data, endPoint }) => {
           },
         }}
       >
-        {data.slice(0, 10).map((movie) => (
-          <SwiperSlide key={movie.id}>
-            <Card movie={movie} />;
+        {data.slice(0, 10).map((item) => (
+          <SwiperSlide className="mb-2" key={item.id}>
+            {isMovie ? <Card movie={item} /> : <CardTvShow tvShow={item}/>}
           </SwiperSlide>
         ))}
       </Swiper>
@@ -80,6 +83,7 @@ CardContainer.propTypes = {
   title: propTypes.string,
   data: propTypes.array,
   endPoint: propTypes.string,
+  isMovie: propTypes.bool,
 };
 
 export default CardContainer;

@@ -10,7 +10,7 @@ const NowPlaying = () => {
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
       {!loading && !error && (
-          <CardContainer title="Now Playing" data={data} endPoint={endPoint} />
+          <CardContainer title="Now Playing" data={data} endPoint={endPoint} isMovie={true} />
       )}
     </>
   )

@@ -10,7 +10,7 @@ const Popular = () => {
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
       {!loading && !error && (
-        <CardContainer title="Popular" data={data} endPoint={endPoint} />
+        <CardContainer title="Popular" data={data} endPoint={endPoint} isMovie={true} />
       )}
     </>
   );

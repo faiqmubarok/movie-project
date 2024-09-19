@@ -124,7 +124,7 @@ const Search = ({ placeholder, typeSearch, onCloseActiveSearch }) => {
                           link={
                             typeSearch === "movie"
                               ? `/movies/${result.id}`
-                              : `/person/${result.id}`
+                              : `/people/${result.id}`
                           }
                           image={
                             typeSearch === "movie"

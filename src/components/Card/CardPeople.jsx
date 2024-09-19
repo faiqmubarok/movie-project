@@ -4,7 +4,7 @@ import propTypes from "prop-types";
 const CardPeople = ({ actor }) => {
   return (
     <>
-      <NavLink className="bg-black/30 hover:bg-secondary shadow-md border border-secondary text-white px-3 py-4 rounded-lg transition-colors duration-500 group">
+      <NavLink to={`/people/${actor.id}`} className="bg-black/30 hover:bg-secondary shadow-md border border-secondary text-white px-3 py-4 rounded-lg transition-colors duration-500 group">
         <div className="rounded-lg mb-4 overflow-hidden">
           <img
             src={`https://image.tmdb.org/t/p/w300${actor.profile_path}`}

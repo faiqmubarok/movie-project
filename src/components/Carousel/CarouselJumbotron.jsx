@@ -7,8 +7,11 @@ import useFetchMoviesFeatured from "../../hooks/useFetchMoviesFeatured";
 import genresMovie from "../../data/genresMovie.json";
 import { NavLink } from "react-router-dom";
 import { FaPlay } from "react-icons/fa";
+import { useRef } from "react";
 
 const CarouselJumbotron = () => {
+  const swiperRef = useRef(null);
+
   const { data, loading, error } = useFetchMoviesFeatured({
     endPoint: "popular",
     page: 1,
@@ -27,6 +30,7 @@ const CarouselJumbotron = () => {
       {!loading && !error && (
         <div className="relative w-full h-72 md:h-96 lg:h-[450px] overflow-hidden">
           <Swiper
+            ref={swiperRef}
             slidesPerView={"auto"}
             spaceBetween={30}
             pagination={{
@@ -46,7 +50,10 @@ const CarouselJumbotron = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-tr from-black/90 via-black/50 to-transparent flex items-end justify-between p-4 md:p-6 lg:p-8">
                     <div className="flex flex-col gap-3">
-                      <NavLink to={`/movies/${movie.id}`} className="px-5 py-2 border rounded-full border-accent hover:bg-accent flex items-center gap-2 w-fit text-xs font-medium text-accent hover:text-white mb-2">
+                      <NavLink
+                        to={`/movies/${movie.id}`}
+                        className="px-5 py-2 border rounded-full border-accent hover:bg-accent flex items-center gap-2 w-fit text-xs font-medium text-accent hover:text-white mb-2"
+                      >
                         <FaPlay />
                         Watch
                       </NavLink>
@@ -62,7 +69,6 @@ const CarouselJumbotron = () => {
                             {getGenreName(genreId)}
                           </span>
                         ))}
-                      
                       </div>
                     </div>
                     <div className=""></div>

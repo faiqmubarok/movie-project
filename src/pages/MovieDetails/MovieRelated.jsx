@@ -9,10 +9,9 @@ const MovieRelated = ({ genreId }) => {
     <>
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
-      {console.log(data)}
       {!loading && !error && (
         <div className="pt-8">
-          <CardContainer title="Movie Related" data={data} endPoint={""} />
+          <CardContainer title="Movie Related" data={data} endPoint={""} isMovie={true} />
         </div>
       )}
     </>

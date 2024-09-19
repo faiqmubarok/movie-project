@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
 import PageTitle from "../../components/PageTitle";
 import { FaPlay } from "react-icons/fa";
-import { CiHeart } from "react-icons/ci";
 
 import MovieRelated from "./MovieRelated";
 
@@ -76,9 +75,6 @@ const MovieDetails = () => {
                 <h1 className="text-white text-3xl font-semibold">
                   {movieDetails?.title}
                 </h1>
-                <button className="text-accent p-1 bg-transparent rounded-lg border border-accent hover:bg-accent hover:text-white">
-                  <CiHeart className="w-6 h-6" />
-                </button>
               </div>
               <p className="text-base text-white mb-1.5">
                 {movieDetails?.tagline}

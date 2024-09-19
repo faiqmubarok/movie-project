@@ -11,6 +11,11 @@ import FilterGenre from "./pages/FilterMovie/FilterGenre";
 import FilterFeatured from "./pages/FilterMovie/FilterFeatured";
 import People from "./pages/People";
 import FilterRealesed from "./pages/FilterMovie/FilterReleased";
+import DetailsPeople from "./pages/DetailsPeople/DetailsPeople";
+import TvShow from "./pages/TvShow";
+import TvShowList from "./pages/TvShowCategory/TvShowList";
+import TvDetails from "./pages/TvDetails/TvDetails";
+import SeasonDetails from "./pages/TvDetails/SeasonDetails";
 
 const App = () => {
   const { pathname } = useLocation();
@@ -72,14 +77,14 @@ const App = () => {
             </>
           }
         />
-        <Route 
-        path="/movies/search"
-        element={
-          <>
-            <PageTitle title={"Search Movies | Nextflix"} />
-            <SearchMovies />
-          </>
-        }
+        <Route
+          path="/movies/search"
+          element={
+            <>
+              <PageTitle title={"Search Movies | Nextflix"} />
+              <SearchMovies />
+            </>
+          }
         />
         <Route
           path="/people"
@@ -89,6 +94,43 @@ const App = () => {
               <People />
             </>
           }
+        />
+        <Route
+          path="/people/:id"
+          element={
+            <>
+              <DetailsPeople />
+            </>
+          }
+        />
+        <Route
+          path="/tvshow"
+          element={
+            <>
+              <PageTitle title={"Tv Show | Nextflix"} />
+              <TvShow />
+            </>
+          }
+        />
+        <Route
+          path="/tvshow/featured/:endPoint"
+          element={
+            <>
+              <TvShowList />
+            </>
+          }
+        />
+        <Route
+          path="/tvshow/:id"
+          element={
+            <>
+              <TvDetails />
+            </>
+          }
+        />
+        <Route
+          path="/tvshow/:id/season/:seasonNumber"
+          element={<SeasonDetails />}
         />
       </Routes>
     </Layout>

@@ -10,7 +10,7 @@ const Upcoming = () => {
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
       {!loading && !error && (
-        <CardContainer title="Up Coming" data={data} endPoint={endPoint} />
+        <CardContainer title="Up Coming" data={data} endPoint={endPoint} isMovie={true} />
       )}
     </>
   );
