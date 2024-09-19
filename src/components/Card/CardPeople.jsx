@@ -7,7 +7,7 @@ const CardPeople = ({ actor }) => {
       <NavLink to={`/people/${actor.id}`} className="bg-black/30 hover:bg-secondary shadow-md border border-secondary text-white px-3 py-4 rounded-lg transition-colors duration-500 group">
         <div className="rounded-lg mb-4 overflow-hidden">
           <img
-            src={`https://image.tmdb.org/t/p/w300${actor.profile_path}`}
+            src={`https://image.tmdb.org/t/p/w342${actor.profile_path}`}
             alt={actor.name}
             className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
           />

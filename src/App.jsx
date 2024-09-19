@@ -15,7 +15,6 @@ import DetailsPeople from "./pages/DetailsPeople/DetailsPeople";
 import TvShow from "./pages/TvShow";
 import TvShowList from "./pages/TvShowCategory/TvShowList";
 import TvDetails from "./pages/TvDetails/TvDetails";
-import SeasonDetails from "./pages/TvDetails/SeasonDetails";
 
 const App = () => {
   const { pathname } = useLocation();
@@ -127,10 +126,6 @@ const App = () => {
               <TvDetails />
             </>
           }
-        />
-        <Route
-          path="/tvshow/:id/season/:seasonNumber"
-          element={<SeasonDetails />}
         />
       </Routes>
     </Layout>

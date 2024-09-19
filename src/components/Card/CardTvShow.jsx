@@ -9,7 +9,7 @@ const CardTvShow = ({ tvShow }) => {
     const genre = genresTvShow.genres.find((genre) => genre.id === genreId);
     return genre ? genre.name : "Unknown";
   };
-  const imageBaseUrl = "https://image.tmdb.org/t/p/original";
+  const imageBaseUrl = "https://image.tmdb.org/t/p/w342";
   
 
   return (

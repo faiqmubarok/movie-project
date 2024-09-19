@@ -71,7 +71,7 @@ const DetailsPeople = () => {
               <img
                 loading="lazy"
                 className="max-w-40 rounded-lg"
-                src={`https://image.tmdb.org/t/p/original/${detailsPeople.profile_path}`}
+                src={`https://image.tmdb.org/t/p/w342/${detailsPeople.profile_path}`}
                 alt={detailsPeople.name}
               />
             </div>

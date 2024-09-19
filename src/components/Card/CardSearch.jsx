@@ -2,7 +2,7 @@ import propTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 
 const CardSearch = ({ link, image, title, paragraf, onClearInput }) => {
-  const imageBaseUrl = "https://image.tmdb.org/t/p/w500";
+  const imageBaseUrl = "https://image.tmdb.org/t/p/w185";
   return (
     <>
       <NavLink

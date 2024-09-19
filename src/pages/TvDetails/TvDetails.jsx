@@ -60,7 +60,7 @@ const TvDetails = () => {
             <img
               loading="lazy"
               className="w-28 md:w-32 rounded-lg h-auto"
-              src={`${imageBaseUrl}${tvDetails.poster_path}`}
+              src={`https://image.tmdb.org/t/p/w342${tvDetails.poster_path}`}
               alt=""
             />
             <div className="w-full">
@@ -112,7 +112,7 @@ const TvDetails = () => {
                     <img
                       loading="lazy"
                       className="mb-2 w-full h-48 md:h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
-                      src={`${imageBaseUrl}${season.poster_path}`}
+                      src={`https://image.tmdb.org/t/p/w342${season.poster_path}`}
                       alt={season.name}
                     />
                     <p className="text-white text-sm font-medium truncate mb-1">

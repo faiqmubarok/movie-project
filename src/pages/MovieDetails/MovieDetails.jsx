@@ -67,7 +67,7 @@ const MovieDetails = () => {
             <img
               loading="lazy"
               className="w-28 md:w-32 rounded-lg h-auto"
-              src={`${imageBaseUrl}${movieDetails?.poster_path}`}
+              src={`https://image.tmdb.org/t/p/w342${movieDetails?.poster_path}`}
               alt=""
             />
             <div className="w-full">
