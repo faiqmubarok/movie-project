@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import CardSearch from "../Card/CardSearch";
 import propTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
+import '../../style/style.css';
 
 const Search = ({ placeholder, typeSearch, onCloseActiveSearch }) => {
   const [searchInput, setSearchInput] = useState("");
@@ -117,7 +118,7 @@ const Search = ({ placeholder, typeSearch, onCloseActiveSearch }) => {
                 )}
                 {!loading && !error && searchResult.length > 0 && (
                   <>
-                    <ul className="w-full overflow-y-auto max-h-72">
+                    <ul className="w-full overflow-y-auto max-h-72 no-scrollbar">
                       {searchResult.slice(0, 10).map((result, index) => (
                         <CardSearch
                           key={index}

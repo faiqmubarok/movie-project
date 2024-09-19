@@ -1,10 +1,11 @@
+import '../../style/style.css';
 const Notification = () => {
   return (
     <div className="absolute right-4 top-24 md:top-[90px] w-80 h-80 bg-black z-30 rounded-sm shadow-md overflow-hidden">
       <h4 className="text-sm font-medium w-full text-start p-4 border-b-2 border-secondary text-white">
         Notification
       </h4>
-      <div className="overflow-y-auto max-h-full pb-14">
+      <div className="overflow-y-auto max-h-full pb-14 no-scrollbar">
         <div className="text-sm text-white p-4 border-b border-secondary">
           <p className="font-semibold">New Message</p>
           <p className="text-xs text-third">2 minutes ago</p>
